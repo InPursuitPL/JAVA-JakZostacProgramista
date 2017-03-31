@@ -1,10 +1,12 @@
 public class Client {
     private String name;
     private Basket basket;
+    private Order order;
     
-    public Client(String name) {
+    public Client(String name, Basket basket, Order order) {
         this.name = name;
-        this.basket = new Basket();
+        this.basket = basket;
+        this.order = order;
     }
     
     public void addToBasket(Product item) {
@@ -12,10 +14,10 @@ public class Client {
     }
     
     public void removeFromBasket(Product item) {
-        this.basket.remProduct(item);
+        this.basket.removeProduct(item);
     }
     
     public void submitOrder() {
-        new Order().sendOrder(this.basket);
+        this.order.sendOrder(this.basket);
     }
 }

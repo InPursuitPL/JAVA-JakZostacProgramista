@@ -12,7 +12,11 @@ public class Basket {
         this.productList.add(item);
     }
     
-    public void remProduct(Product item) {
+    public void removeProduct(Product item) {
         this.productList.remove(item);
+    }
+    
+    public int viewNumberOfProducts() {
+        return this.productList.size();
     }
 }
