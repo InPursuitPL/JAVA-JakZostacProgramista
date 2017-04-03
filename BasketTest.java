@@ -4,8 +4,12 @@ import static org.junit.Assert.assertEquals;
 
 public class BasketTest
 {
+   // Dobra robota! - pierwszy test JUnitowy jak najbardziej w porządku.
+   // Testy jednostkowe są również swego rodzaju dokumentacją.
+   // Do tego jednak nazwa testu musi przekazywać więcej informacji.
+   // Jedna z konwencji: [UnitOfWork__StateUnderTest__ExpectedBehavior]
    @Test
-   public void basicTest() {
+   public void addProduct_newEmptyBasket_shouldIncreaseProductCount() {
        Basket basket = new Basket();
        
        assertEquals(0, basket.viewNumberOfProducts());
